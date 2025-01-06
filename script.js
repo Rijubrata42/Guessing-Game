@@ -81,3 +81,16 @@ document.querySelector('.guess').addEventListener('keypress',function(e){
     }
     
 })
+
+document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){
+    number=Math.trunc(Math.random()*20+1);
+    score=20
+    document.querySelector('.score').textContent=score;
+    document.querySelector('.guess').value='';
+    document.querySelector('.number').textContent='?';
+    document.querySelector('.message').textContent='Start guessing...';
+    document.querySelector('body').style.backgroundColor='#222';
+    }
+})
+
